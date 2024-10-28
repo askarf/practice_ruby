@@ -51,8 +51,16 @@
 
 # Reverse String
 
-def reverse_string(string)
-  string.reverse
+# def reverse_string(string)
+#   string.reverse
+# end
+
+# p reverse_string("HELLO")
+
+# Largest Number
+
+def largest_number(array)
+  return array.max
 end
 
-p reverse_string("HELLO")
+p largest_number([34, 234, 12, 123])
