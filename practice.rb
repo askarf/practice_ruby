@@ -59,8 +59,24 @@
 
 # Largest Number
 
-def largest_number(array)
-  return array.max
+# def largest_number(array)
+#   return array.max
+# end
+
+# p largest_number([34, 234, 12, 123])
+
+# Fibonacci sequence
+def fibonacci(n)
+  first = (0)
+  second = (1)
+  sequence = [0, 1]
+  while sequence.length <= n
+    new = (first + second)
+    first = second
+    second = new
+    sequence.push(new)
+  end
+  return sequence.last
 end
 
-p largest_number([34, 234, 12, 123])
+p fibonacci(9)
