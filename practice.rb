@@ -24,8 +24,19 @@
 
 # Multiples Checker
 
-def multiple_checker?(integer, divisor)
-  p integer % divisor == 0
+# def multiple_checker?(integer, divisor)
+#   p integer % divisor == 0
+# end
+
+# multiple_checker?(66, 4)
+
+# Count Vowels
+def vowels?(chars)
+  "aeiouAEIOU".include?(chars)
 end
 
-multiple_checker?(66, 4)
+def count_vowels(string)
+  p string.chars.count { |ls| vowels?(ls) }
+end
+
+count_vowels("ayalasasa")
