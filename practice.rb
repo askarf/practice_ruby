@@ -16,8 +16,16 @@
 
 # Palindrome Checker
 
-def is_palindrome?(string)
-  p string.reverse == string
+# def is_palindrome?(string)
+#   p string.reverse == string
+# end
+
+# is_palindrome?("racecar")
+
+# Multiples Checker
+
+def multiple_checker?(integer, divisor)
+  p integer % divisor == 0
 end
 
-is_palindrome?("racecar")
+multiple_checker?(66, 4)
