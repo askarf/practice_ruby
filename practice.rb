@@ -66,17 +66,15 @@
 # p largest_number([34, 234, 12, 123])
 
 # Fibonacci sequence
-def fibonacci(n)
-  first = (0)
-  second = (1)
-  sequence = [0, 1]
-  while sequence.length <= n
-    new = (first + second)
-    first = second
-    second = new
-    sequence.push(new)
-  end
-  return sequence.last
-end
+# def fibonacci(n)
+#   return n if n <= 1
+#   first, second = 1, 2
 
-p fibonacci(9)
+#   (2..n).each do
+#     first, second = second, first + second
+#   end
+
+#   second
+# end
+
+# p fibonacci(33)
