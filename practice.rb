@@ -1,15 +1,23 @@
-puts "Hello, Ruby with Git!"
+# puts "Hello, Ruby with Git!"
 
-p "FizzBuzz"
+# FizzBuzz practice questions
 
-(1..100).each do |n|
-  if (n % 3 == 0) && (n % 5 == 0)
-    puts "FizzBuzz"
-  elsif n % 5 == 0
-    puts "Buzz"
-  elsif n % 3 == 0
-    puts "Fizz"
-  else
-    puts n
-  end
+# (1..100).each do |n|
+#   if (n % 3 == 0) && (n % 5 == 0)
+#     puts "FizzBuzz"
+#   elsif n % 5 == 0
+#     puts "Buzz"
+#   elsif n % 3 == 0
+#     puts "Fizz"
+#   else
+#     puts n
+#   end
+# end
+
+# Palindrome Checker
+
+def is_palindrome?(string)
+  p string.reverse == string
 end
+
+is_palindrome?("racecar")
