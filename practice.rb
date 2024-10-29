@@ -121,18 +121,27 @@
 #For example, in the string "abcabcbb",
 #the answer would be 3, since "abc" is the longest substring without repeating characters.
 
-string = "asdfaasdgdgaaghgsdafgasdcxbgnbrtywyujkadsgfasdasadfgioao"
-substring = []
-substring_length = 0
+# string = "asdfaasdgdgaaghgsdafgasdcxbgnbrtywyujkadsgfasdasadfgioao"
+# substring = []
+# substring_length = 0
 
-string.chars do |l|
-  if !substring.include?(l)
-    substring.push(l)
-  else
-    substring_length = [substring_length, substring.length].max
-    p substring
+# string.chars do |l|
+#   if !substring.include?(l)
+#     substring.push(l)
+#   else
+#     substring_length = [substring_length, substring.length].max
+#     p substring
 
-    substring = substring[substring.index(l) + 1..] + [l]
-  end
+#     substring = substring[substring.index(l) + 1..] + [l]
+#   end
+# end
+# p substring_length
+
+def find_missing_number(array)
+  n = array.length
+  expected_sum = (n * (n + 1)) / 2
+  actual_sum = array.sum
+  expected_sum - actual_sum
 end
-p substring_length
+
+find_missing_number([4, 2, 1, 0])
