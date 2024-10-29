@@ -78,3 +78,22 @@
 # end
 
 # p fibonacci(33)
+
+# Prime Number Checker
+# def is_prime?(n)
+#   require "prime"
+#   n.prime?
+# end
+
+# p is_prime?(9)
+
+def is_prime?(number)
+  return false if number < 2
+
+  (2..Math.sqrt(number)).each do |i|
+    return false if number % 1 == 0
+  end
+  true
+end
+
+p is_prime?(3)
