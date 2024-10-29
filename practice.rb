@@ -101,16 +101,38 @@
 # Two Sum: Given an array of integers and a target number, find two numbers in the array that add up to the target. Return their indices.
 # For example, for array = [2, 7, 11, 15] and target = 9, the output should be [0, 1] because array[0] + array[1] = 9.
 
-array = [2, 7, 11, 15]
-target = 9
-target_array = []
+# array = [2, 7, 11, 15]
+# target = 9
+# target_array = []
 
-(0...array.length).each do |i|
-  (i + 1...array.length).each do |j|
-    if array[i] + array[j] == target
-      target_array.push(i, j)
-      p target_array
-      break
-    end
+# (0...array.length).each do |i|
+#   (i + 1...array.length).each do |j|
+#     if array[i] + array[j] == target
+#       target_array.push(i, j)
+#       p target_array
+#       break
+#     end
+#   end
+# end
+
+# Longest Substring Without Repeating Characters:
+# Given a string,
+#find the length of the longest substring without repeating characters.
+#For example, in the string "abcabcbb",
+#the answer would be 3, since "abc" is the longest substring without repeating characters.
+
+string = "asdfaasdgdgaaghgsdafgasdcxbgnbrtywyujkadsgfasdasadfgioao"
+substring = []
+substring_length = 0
+
+string.chars do |l|
+  if !substring.include?(l)
+    substring.push(l)
+  else
+    substring_length = [substring_length, substring.length].max
+    p substring
+
+    substring = substring[substring.index(l) + 1..] + [l]
   end
 end
+p substring_length
