@@ -137,11 +137,49 @@
 # end
 # p substring_length
 
-def find_missing_number(array)
-  n = array.length
-  expected_sum = (n * (n + 1)) / 2
-  actual_sum = array.sum
-  expected_sum - actual_sum
+# def find_missing_number(array)
+#   n = array.length
+#   expected_sum = (n * (n + 1)) / 2
+#   actual_sum = array.sum
+#   expected_sum - actual_sum
+# end
+
+# find_missing_number([4, 2, 1, 0])
+# create diff arrays of all the simialr words
+
+words = ["eat", "tea", "tan", "ate", "nat", "bat"]
+left_over = []
+array_of_anagrams = []
+current_array = []
+
+i = 0
+
+while i <= words.length
+  if i == words.length
+    array_of_anagrams.push(current_array)
+    current_array = []
+    words = left_over
+    left_over = []
+  elsif words.length == 0
+    break
+  elsif current_array.length == 0
+    current_array.push(words[i])
+  elsif words[i].chars.sort == current_array[0].chars.sort
+    current_array.push(words[i])
+  elsif left_over.push(words[i])
+  end
+  i += 1
+  if current_array.length == 0 && words.length > 0
+    i = 0
+  end
 end
 
-find_missing_number([4, 2, 1, 0])
+p array_of_anagrams
+
+# words.each do |word|
+#   if current_array.length == 0
+#     current_array.push(word)
+#   elsif current_array[0].sort == word.sort
+#     current_array.push(word)
+#   end
+# end
